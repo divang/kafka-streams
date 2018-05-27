@@ -21,7 +21,7 @@ Prerequisite
 - java -cp .:streams-0.0.1-SNAPSHOT.jar com.training.kafka.basic.streams.SimpleStream
 
 -To produce data to Stream source input topic:
-	- bin/kafka-console-producer.sh --broker-list localhost:9092 --topic transcations-input
+	=> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic transcations-input
 
 -To validate Stream sink output topic data:
-	- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  transcations-output --from-beginning
+	=> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  transcations-output --from-beginning
