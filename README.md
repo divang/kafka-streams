@@ -1,4 +1,4 @@
-# =============== Simple kafka-streams Setup ==================
+# Simple kafka-streams Setup 
 
 Steps to use this kafka simple client
 
@@ -20,14 +20,14 @@ Prerequisite
 - cd target
 - java -cp .:streams-0.0.1-SNAPSHOT.jar com.training.kafka.basic.streams.SimpleStream
 
--To produce data to Stream source input topic:
-	=> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic transcations-input
+- To produce data to Stream source input topic: 
+	- bin/kafka-console-producer.sh --broker-list localhost:9092 --topic transcations-input
 
 -To validate Stream sink output topic data:
 	- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  transcations-output --from-beginning
 	
 	
-# =================== Credit card transactions and prediction of EMI conversion Setup ================
+# Credit card transactions and prediction of EMI conversion Setup
 
 Setup of Credit card transactions and prediction of EMI conversion via stream  processor:
 
