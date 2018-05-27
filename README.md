@@ -1,6 +1,6 @@
-# kafka-streams
+# =============== Simple kafka-streams Setup ==================
 
-Step to use this kafka simple client
+Steps to use this kafka simple client
 
 Prerequisite
 
@@ -25,3 +25,23 @@ Prerequisite
 
 -To validate Stream sink output topic data:
 	- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  transcations-output --from-beginning
+	
+	
+# =================== Credit card transactions and prediction of EMI conversion Setup ================
+
+Setup of Credit card transactions and prediction of EMI conversion via stream  processor:
+
+- bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic credit-card-transcations
+- bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic credit-card-emi-predictions
+
+- mvn clean install
+- cd target
+- java -cp .:kafka-streams-0.0.1-SNAPSHOT.jar  com.training.kafka.basic.streams.processor.EMIPredictionStream
+
+- To simulate Credit Card Transaction:
+	- cd target [in other command prompt]
+	- java -cp .:kafka-streams-0.0.1-SNAPSHOT.jar  com.training.kafka.basic.simulators.CreditCardTransactionsProducer
+
+- To validate EMI predictions data:
+	- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  credit-card-emi-predictions --from-beginning
+	

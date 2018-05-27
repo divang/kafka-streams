@@ -1,2 +1,8 @@
+com/training/kafka/basic/util/UtilsConstant.class
 com/training/kafka/basic/streams/SimpleStream.class
+com/training/kafka/basic/streams/processor/EMIConvertorSupplier.class
 com/training/kafka/basic/streams/SimpleStream$1.class
+com/training/kafka/basic/streams/processor/EMIPredictionStream.class
+com/training/kafka/basic/streams/processor/EMIConvertorProcessor.class
+com/training/kafka/basic/simulators/CreditCardTransactionsProducer.class
+com/training/kafka/basic/util/Utils.class
